@@ -1,3 +1,12 @@
+Customization based on SwitcDoc Labs GroveWeatherPi components.
+
+Objective: Simplify and published near realtime weather sensor data via MQTT.
+
+_________________________________________________________
+
+
+
+
 Weather Board Libraries and Example for Raspberry Pi
 
 Supports SwitchDoc Labs WeatherRack / Argent Data / Sparkfun
