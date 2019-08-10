@@ -2,6 +2,28 @@ Customization based on SwitcDoc Labs GroveWeatherPi components.
 
 Objective: Simplify and published near realtime weather sensor data via MQTT.
 
+
+Instructions:
+
+1. Follow the original SwithcDoc instructions (below) and enable the components you are using in config.py
+2. Add your MQTT broker IP and credentials in wxmqtt.py
+3. Start with: 
+  sudo python wxmqtt.py
+  
+Test by using a MQTT client like MQTT Exployer https://github.com/thomasnordquist/MQTT-Explorer.git
+
+Message queues are:
+
+wx/totalRain"
+wx/currentWindSpeed"
+wx/currentWindGust"
+wx/currentWindDirection"
+wx/currentWindDirectionVoltage"
+
+To do:
+Move MQTT Broker setup to config.py
+Add more sensors
+Add MQTT LWT
 _________________________________________________________
 
 
