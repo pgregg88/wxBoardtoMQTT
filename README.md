@@ -10,7 +10,7 @@ Instructions:
 3. Start with: 
   sudo python wxmqtt.py
   
-Test by using a MQTT client like MQTT Exployer https://github.com/thomasnordquist/MQTT-Explorer.git
+Test by using a MQTT client like MQTT Explorer https://github.com/thomasnordquist/MQTT-Explorer.git
 
 Message queues are:
 
