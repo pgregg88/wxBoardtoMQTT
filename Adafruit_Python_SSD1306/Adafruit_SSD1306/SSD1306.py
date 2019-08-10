@@ -85,7 +85,8 @@ class SSD1306Base(object):
             self._gpio = GPIO.get_platform_gpio()
         # Setup reset pin.
         self._rst = rst
-        self._gpio.setup(self._rst, GPIO.OUT)
+        if not self._rst is None:
+            self._gpio.setup(self._rst, GPIO.OUT)
         # Handle hardware SPI
         if spi is not None:
             self._log.debug('Using hardware SPI')
@@ -150,6 +151,8 @@ class SSD1306Base(object):
 
     def reset(self):
         """Reset the display."""
+        if self._rst is None:
+            return
         # Set reset high for a millisecond.
         self._gpio.set_high(self._rst)
         time.sleep(0.001)
@@ -229,7 +232,7 @@ class SSD1306Base(object):
                 contrast = 0x9F
             else:
                 contrast = 0xCF
-
+            self.set_contrast(contrast)
 
 class SSD1306_128_64(SSD1306Base):
     def __init__(self, rst, dc=None, sclk=None, din=None, cs=None, gpio=None,
